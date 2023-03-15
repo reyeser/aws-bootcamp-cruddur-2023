@@ -33,7 +33,7 @@ import logging
 from time import strftime
 
 #ROLLBAR  
-import os
+#import os
 import rollbar
 import rollbar.contrib.flask
 from flask import got_request_exception
