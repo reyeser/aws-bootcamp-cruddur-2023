@@ -44,26 +44,14 @@ export default function ConfirmationPage() {
     event.preventDefault();
     setErrors('')
     try {
-        const { user } = await Auth.signUp({
-          username: email,
-          password: password,
-          attributes: {
-              name: name,
-              email: email,
-              preferred_username: username,
-          },
-          autoSignIn: { // optional - enables auto sign in after user is confirmed
-              enabled: true,
-          }
-        });
-        console.log(user);
-        window.location.href = `/confirm?email=${email}`
+      await Auth.confirmSignUp(email, code);
+      window.location.href = "/"
     } catch (error) {
-        console.log(error);
-        setErrors(error.message)
+      setErrors(error.message)
     }
     return false
   }
+
   
   let el_errors;
   if (errors){
