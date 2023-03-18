@@ -6,9 +6,12 @@ tracer = trace.get_tracer("home.activities")
 
 
 class HomeActivities:
-  def run(logger):
-    logger.info("HomeActivities")
-    now = datetime.now(timezone.utc).astimezone()
+  def run():
+    #logger.info("HomeActivities")
+   #  with tracer.start_as_current_span("home-activites-mock-data"):
+   #   span = trace.get_current_span()
+    #  now = datetime.now(timezone.utc).astimezone()
+  #    span.set_attribute("app.now", now.isoformat())
     results = [{
       'uuid': '68f126b0-1ceb-4a33-88be-d90fa7109eee',
       'handle':  'Andrew Brown',
