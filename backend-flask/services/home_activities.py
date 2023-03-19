@@ -25,6 +25,10 @@ class HomeActivities:
         # this will return a tuple
         # the first field being the data
         json = cur.fetchone()
+        #rows = cur.fetchall()
+        print('FFFFFF')
+        #for row in rows:
+         # print(row)
     print("-1---")
     print(json[0])
     return json[0]
